@@ -1,0 +1,38 @@
+<section>
+  <div class="container mt-2 pt-5">
+    <div class="section-title1">
+      <h2 class="text-center">PRODUCTS LIST</h2>
+    </div>
+
+    <div class="text-center" *ngIf="isLoading">
+      <h5>LOADING......</h5>
+    </div>
+
+    <div *ngIf="!isLoading">
+      <swiper [config]="config">
+        <ng-template *ngFor="let product of products" swiperSlide>
+          <div class="card card-body">
+            <img
+              class="img-fluid"
+              [ngStyle]="{ height: '300px' }"
+              [src]="product.image"
+            />
+            <h3 class="mt-3 text-center">
+              {{ product.category }}
+            </h3>
+            <h3 style="opacity: 0; cursor: default;" class="mt-2 text-center">
+              {{ product.price }}
+            </h3>
+            <button
+              (click)="goToProductDetails(product.id)"
+              class="btn btn-block bg-primary software-list text-white"
+            >
+              Go to Product details page ID :
+              <span class="font-weight-bolder"> {{ product.id }}</span>
+            </button>
+          </div>
+        </ng-template>
+      </swiper>
+    </div>
+  </div>
+</section>

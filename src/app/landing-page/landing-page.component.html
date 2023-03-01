@@ -1,0 +1,18 @@
+<div style="height: 100vh;overflow-y: scroll;" (scroll)="handleScroll($event)">
+  <div style="position: sticky; top: 0; z-index: 99999; background: lightblue">
+    productListRendered: {{ productListRendered }}<br />
+    getStartedRendered: {{ getStartedRendered }} <br />
+    aboutRendered: {{ aboutRendered }}<br />
+  </div>
+  <app-header></app-header>
+  <app-youtube></app-youtube>
+  <div
+    #productListcontainer
+    [style.height.px]="productListRendered ? 0 : 200"
+  ></div>
+  <div
+    #getStartedcontainer
+    [style.height.px]="getStartedRendered ? 0 : 200"
+  ></div>
+  <div #aboutContainer [style.height.px]="aboutRendered ? 0 : 200"></div>
+</div>

@@ -1,0 +1,5 @@
+@import '~swiper/swiper-bundle';
+
+* {
+  box-sizing: border-box;
+}

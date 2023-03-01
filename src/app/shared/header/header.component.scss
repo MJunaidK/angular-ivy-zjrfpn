@@ -1,0 +1,78 @@
+.black-overlay {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 5em;
+  height: 200px;
+  width: 200px;
+}
+
+.carousel .carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+
+.carousel-indicators {
+  bottom: 0 !important;
+}
+
+.carousel-caption {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.carousel-item {
+  position: relative !important;
+  height: 540px;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  background-size: cover;
+}
+
+@media (max-width: 576px) {
+  .black-overlay {
+    display: none;
+  }
+
+  .carousel-item {
+    position: relative !important;
+    height: 350px;
+    background: no-repeat center center scroll;
+    background-size: cover;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .black-overlay {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  .black-overlay {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 767px) {
+  .black-overlay {
+    display: none;
+  }
+
+  .carousel-item {
+    position: relative !important;
+    height: 350px;
+    background: no-repeat center center scroll;
+    background-size: cover;
+  }
+
+  .carousel-caption h2 {
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-weight: 800;
+  }
+}
